@@ -4,10 +4,25 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
+  text-align: center;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.is-active{
+  text-decoration: underline;
+  color: red;
+  text-transform: uppercase;
+}
+.container {
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+.hidden{
+  visibility: hidden;
 }
