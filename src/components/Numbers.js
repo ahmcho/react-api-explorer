@@ -1,10 +1,10 @@
-import React,{Fragment, useState} from 'react';
+import React,{Fragment, useState, useEffect} from 'react';
 
 const Numbers = () => {
     const [fact,setFact] = useState('');
     const [number, setNumber] = useState('');
 
-    const fetchData = (number='random') =>{
+    const fetchData = ( number = 'random') => {
         fetch(`http://numbersapi.com/${number}?json`)
         .then((resp) => {
             return resp.json()
@@ -15,6 +15,10 @@ const Numbers = () => {
         })
     }
 
+    useEffect(() => {
+        fetchData();
+    },[]);
+    
     const onChange = (e) => {
         document.querySelector('p').classList.remove('hidden');
         fetchData(e.target.value);
